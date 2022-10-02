@@ -10,7 +10,7 @@ AppDataSource.initialize().then(() => {
   app.use(router)
   app.use(express.json())
 
-  app.listen(8000, () => console.log('Server listenning...'))
+  app.listen(process.env.PORT, () => console.log('Server listenning...'))
 }).catch((error) => {
   console.log(error)
 })
