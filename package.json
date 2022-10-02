@@ -5,7 +5,7 @@
    "license": "MIT",
    "scripts": {
       "dev": "tsnd --ignore node_modules src/server.ts",
-      "start": "ts-node src/index.ts",
+      "start": "ts-node src/server.ts",
       "typeorm": "ts-node ./node_modules/typeorm/cli.js",
       "migrate": "yarn typeorm migration:run --dataSource ./src/database/index.ts"
    },
