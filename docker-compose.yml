@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  database:
+    image: postgres:13-alpine
+    container_name: files_uploader_db
+    environment:
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+      POSTGRES_DB: ${PG_DB}
+    ports:
+      - "5432:5432"
+    network_mode: host
+    restart: unless-stopped
